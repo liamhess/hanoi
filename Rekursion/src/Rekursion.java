@@ -32,4 +32,13 @@ public class Rekursion {
         }
         return ggT;
     }
+
+    public int ggtrekursiv(int a, int b) {
+        int neu = Math.max(a, b) - Math.min(a, b);
+        if (neu == Math.min(a, b)) {
+            return neu;
+        } else {
+            return ggtrekursiv (Math.min(a, b), neu);
+        }
+    }
 }
