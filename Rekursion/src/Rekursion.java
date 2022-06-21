@@ -41,4 +41,14 @@ public class Rekursion {
             return ggtrekursiv (Math.min(a, b), neu);
         }
     }
+
+    public String Palindrom(String wort) {
+        if (wort.length()<=1) {
+            return "richtig";
+        } else if (wort.charAt(0) == wort.charAt(wort.length()-1)) {
+            return Palindrom(wort.substring(1, wort.length()-1));
+        } else {
+            return "falsch";
+        }
+    }
 }
